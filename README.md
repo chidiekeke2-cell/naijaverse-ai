@@ -2,33 +2,60 @@
 
 **Turn your imagination into a playable world.**
 
-NaijaVerse AI is an AI-powered interactive storytelling platform that transforms an idea into characters, scenes, choices and a playable adventure.
+NaijaVerse AI is a hackathon-focused interactive storytelling platform that transforms a story idea into a playable branching adventure, with African creativity at its core.
+
+## Core loop
+
+**Imagine → Generate → Remix → Play → Share**
 
 ## MVP
 
-- Premium responsive landing page
-- Creation Studio
-- Talking Drum playable demo
-- Interactive-story foundation
-- AI-ready architecture
-- Supabase-ready database plan
+- AI-ready world generation architecture
+- Structured, Zod-validated AI output
+- Branching game engine
+- Inventory and item requirements
+- Multiple endings
+- The Talking Drum demo set in Enugu
+- Supabase persistence schema with RLS
+- Demo-first architecture so the showcase can run without provider keys
 
-## Run locally
+## Stack
+
+- Next.js + React + TypeScript
+- Tailwind CSS
+- Zod
+- Supabase PostgreSQL
+- OpenAI-compatible server-side AI adapter
+
+## Local development
 
 ```bash
 npm install
+cp .env.example .env.local
 npm run dev
 ```
 
-Open http://localhost:3000.
+Then open `http://localhost:3000`.
 
 ## Environment
 
-Copy `.env.example` to `.env.local` and add provider credentials when enabling AI/database integrations. Demo mode is designed to remain usable without external keys.
+See `.env.example`. Never commit real secrets. AI keys must remain server-side.
 
-## Vision
+## Supabase
 
-Imagine it. Generate it. Remix it. Play it.
+Run `supabase/schema.sql` in a Supabase SQL editor, then configure the public URL/key and server-side service role key in your environment. Enable Auth when account persistence is needed.
+
+## Demo
+
+The Talking Drum demo is designed to provide a reliable judge experience even when external AI services are unavailable. The production AI path can be enabled by adding the required provider key.
+
+## Deployment
+
+Deploy the Next.js application to Vercel, configure the same environment variables in the project settings, and run `npm run build` before submitting.
+
+## Product vision
+
+NaijaVerse aims to become an AI engine for African interactive storytelling: creators describe an idea and turn it into stories, games, audio experiences and shareable worlds without needing a full production team.
 
 ## License
 
