@@ -19,3 +19,9 @@ export const talkingDrum: World = {
     { id: 'guardian', title: 'The Guardian', narration: 'The rhythm becomes softer. Ama realizes the choice is not about finding every answer, but deciding which stories deserve protection.', choices: [] }
   ]
 };
+
+// Backwards-compatible name used by the dashboard, explore page, and remix API.
+export const demoWorld = {
+  ...talkingDrum,
+  description: talkingDrum.logline
+};
